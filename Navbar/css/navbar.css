@@ -60,11 +60,11 @@ p
     padding:6px 0;
     padding-right: 15px;
 }
-ul
-{
-    float: right;
-    display: flex;
-}
+/*ul*/
+/*{*/
+/*    float: right;*/
+/*    display: flex;*/
+/*}*/
 
 .logo
 {
@@ -297,6 +297,7 @@ ul
     #menu
     {
         display: block;
+        float: right;
         background: #FAFAFA;
         margin-right: -106px;
         margin-top: 74px;
@@ -384,3 +385,8 @@ ul
     }
 }
 
+.exp
+{
+    width: 400px;
+    height: 1500px;
+}
