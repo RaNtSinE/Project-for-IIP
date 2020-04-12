@@ -21,7 +21,8 @@ header
     background: #FAFAFA;
     height: 80px;
     padding-top: 12px;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width:100%;
     transition: 0.5s;
     z-index: 40;
@@ -60,11 +61,11 @@ p
     padding:6px 0;
     padding-right: 15px;
 }
-/*ul*/
-/*{*/
-/*    float: right;*/
-/*    display: flex;*/
-/*}*/
+#menu
+{
+    float: right;
+    display: flex;
+}
 
 .logo
 {
@@ -297,7 +298,6 @@ p
     #menu
     {
         display: block;
-        float: right;
         background: #FAFAFA;
         margin-right: -106px;
         margin-top: 74px;
@@ -383,10 +383,4 @@ p
         background-size: 200vh;
         background-position-x: center;
     }
-}
-
-.exp
-{
-    width: 400px;
-    height: 1500px;
 }
