@@ -363,6 +363,16 @@ ul
     {
         margin-top: 24px;
     }
+
+    .nav-toggle
+    {
+        margin-right: 0px!important;
+    }
+    
+    .logo
+    {
+        margin-left: 20px!important;
+    }
 }
 
 @media(max-aspect-ratio:16/9)
@@ -373,3 +383,4 @@ ul
         background-position-x: center;
     }
 }
+
