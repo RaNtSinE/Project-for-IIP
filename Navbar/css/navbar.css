@@ -362,7 +362,8 @@ p
 {
     #menu
     {
-        margin-top: 24px;
+        margin-top: 74px;
+        margin-right: -75px;
     }
 
     .nav-toggle
@@ -376,6 +377,15 @@ p
     }
 }
 
+@media(max-width:377px)
+{
+    #menu
+    {
+        margin-top: 24px;
+        margin-right: -75px;
+    }
+}
+
 @media(max-aspect-ratio:16/9)
 {
     body
@@ -383,4 +393,63 @@ p
         background-size: 200vh;
         background-position-x: center;
     }
+}
+
+.exp
+{
+    width: 100%;
+    height: 1000px;
+}
+
+footer .upline
+{
+    width: 100%;
+    height: 1px;
+    background: #3AB9DA;
+}
+footer .footerContent
+{
+    width: 100%;
+    height: 300px;
+    background: #F3F3F3;
+}
+
+footer .logo
+{
+    width: 150px;
+    height: 30px;
+    font-family: 'Stalinist One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 8vw;
+    margin-top: 50px;
+    color: #313131;
+}
+
+footer .aboutUs
+{
+    padding-top: 240px;
+    margin-left: 8vw;
+}
+
+footer .aboutUs p
+{
+    color: #929292;
+}
+
+footer .logo:hover
+{
+    cursor: default;
+}
+
+footer .downline
+{
+    width: 100%;
+    height: 50px;
+    background: #E3EFF2;
 }
