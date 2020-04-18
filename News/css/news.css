@@ -1,3 +1,4 @@
+
 body
 {
     background: #C5EAF3;
@@ -203,4 +204,9 @@ body
 @media(max-width:400px)
 {
 
+}
+
+.exp
+{
+    height: calc(100vh - 92px - 351px);
 }
