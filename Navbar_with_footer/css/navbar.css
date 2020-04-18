@@ -1,3 +1,4 @@
+
 body
 {
     width: 100%;
@@ -21,9 +22,12 @@ header
     background: #FAFAFA;
     height: 80px;
     padding-top: 12px;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width:100%;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     z-index: 40;
 }
@@ -64,11 +68,15 @@ p
 #menu
 {
     float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .logo
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     float: left;
     width: 200px;
@@ -92,7 +100,11 @@ p
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
     color: #313131;
@@ -125,6 +137,8 @@ p
 
 #menu
 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     margin-right: 80px;
     margin-top: 6px;
@@ -140,9 +154,15 @@ p
     padding: 0px 10px;
     padding-right: 15px;
     padding-top: 20px;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
     float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius:30px;
     border: 1px solid transparent;
@@ -162,6 +182,8 @@ p
 {
     color: #313131;
     padding: 0px 10px;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
 }
 
@@ -206,8 +228,12 @@ p
 
 .nav p
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     float: right;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius:30px;
     border: 1px solid transparent;
@@ -233,7 +259,11 @@ p
 {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    -webkit-transition: -webkit-transform 400ms;
+    transition: -webkit-transform 400ms;
+    -o-transition: transform 400ms;
     transition: transform 400ms;
+    transition: transform 400ms, -webkit-transform 400ms;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -243,28 +273,38 @@ p
 #ham path
 {
     stroke: #313131;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
 #ham.active path
 {
     stroke: black;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
 .hamRotate.activee
 {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .hamRotate180.activee
 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
 .line
 {
     fill:none;
+    -webkit-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    -o-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
     stroke:#000;
     stroke-width:5.5;
@@ -310,7 +350,6 @@ p
         -ms-transform-origin: 0 0;
         transform-origin: 0 0;
         -webkit-transition: 0.2s ease-in-out;
-        -moz-transition: 0.2s ease-in-out;
         -o-transition: 0.2s ease-in-out;
         transition: 0.2s ease-in-out;
         height: 220px;
@@ -356,6 +395,8 @@ p
 
     .nav-toggle
     {
+        display: -webkit-box!important;
+        display: -ms-flexbox!important;
         display: flex!important;
     }
 }
@@ -372,7 +413,7 @@ p
     {
         margin-right: 0px!important;
     }
-    
+
     .logo
     {
         margin-left: 20px!important;
@@ -421,7 +462,11 @@ footer .logoFoot
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
     margin-left: 8vw;
@@ -465,7 +510,11 @@ footer .vac
 
 footer .vac ul li
 {
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     font-family: 'Roboto';
@@ -489,6 +538,8 @@ footer .vac ul li p
 footer .vac ul li a
 {
     color: #313131;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
     color: #313131;
 }
@@ -509,7 +560,11 @@ footer .social
 
 footer .social ul li
 {
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     font-family: 'Roboto';
@@ -533,6 +588,8 @@ footer .social ul li p
 footer .social ul li a
 {
     color: #313131;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: 0.25s;
     color: #313131;
 }
