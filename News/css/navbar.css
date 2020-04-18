@@ -409,6 +409,11 @@ p
         margin-right: -75px;
     }
 
+    .loggined #menu
+    {
+        margin-right: -75px;
+    }
+
     .nav-toggle
     {
         margin-right: 0px!important;
