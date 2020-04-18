@@ -221,6 +221,7 @@ p
     float: right;
     display: none;
     margin-right: 30px;
+    height: 60px;
 }
 
 .nav-toggle:hover #ham path
