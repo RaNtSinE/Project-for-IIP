@@ -85,13 +85,18 @@ body
 
 .job .jobTitle
 {
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 25vw;
+}
+
+.job .jobTitle p
+{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 18px;
-    padding-top: 20px;
-    padding-left: 20px;
 
     color: #313131;
 }
@@ -151,6 +156,11 @@ body
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.jobs
+{
+    padding-bottom: 8vw;
+}
+
 @media(max-width:1000px)
 {
     .jobs .job
@@ -160,6 +170,11 @@ body
         margin-left: 0.99vw;
         margin-top: 2vw;
         margin-bottom: 2vw;
+    }
+
+    .job .jobTitle
+    {
+        width: 39vw;
     }
 
     .job .line
@@ -182,6 +197,11 @@ body
         margin-left: 0.99vw;
         margin-top: 2vw;
         margin-bottom: 2vw;
+    }
+
+    .job .jobTitle
+    {
+        width: 77vw;
     }
 
     .job .line
