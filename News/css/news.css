@@ -1,7 +1,7 @@
 
 body
 {
-    background: #C5EAF3;
+    background: #FFFFFF;
 }
 
 .news
@@ -39,9 +39,11 @@ body
     margin-right: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    background: #FFFFFF;
+    background: rgba(197, 234, 243, 0.41);
     border-radius: 5px;
     padding-bottom: 55px;
+    border: 2px solid #3AB9DA;
+    box-sizing: border-box;
 }
 
 .new .date
