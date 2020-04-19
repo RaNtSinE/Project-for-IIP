@@ -20,7 +20,7 @@ body
 header
 {
     background: #FAFAFA;
-    height: 80px;
+    padding-bottom: 60px;
     padding-top: 12px;
     position: -webkit-sticky;
     position: sticky;
@@ -135,6 +135,7 @@ p
     }
 }
 
+
 #menu
 {
     -webkit-box-flex: 1;
@@ -192,6 +193,11 @@ p
     margin-right: 30px;
 }
 
+.loggined #menu .letter
+{
+    margin-right: 0px;
+}
+
 #menu a:hover
 {
     color: #818181;
@@ -210,6 +216,11 @@ p
 #menu .profile
 {
     padding-right: 0px;
+}
+
+.loggined #menu .profile
+{
+    padding-right: 30px;
 }
 
 #menu .profile a
@@ -333,10 +344,29 @@ p
 
 @media(max-width:1000px)
 {
+    header
+    {
+        padding-bottom: 60px;
+    }
+
     .logo
     {
         margin-left: 50px;
     }
+    .menu
+    {
+        position: absolute;
+        right: 150px;
+        top: 10px;
+    }
+
+    .loggined
+    {
+        position: absolute;
+        right: 150px;
+        top: 10px;
+    }
+
     #menu
     {
         display: block;
@@ -353,6 +383,7 @@ p
         -o-transition: 0.2s ease-in-out;
         transition: 0.2s ease-in-out;
         height: 220px;
+        position: fixed;
     }
     .loggined #menu
     {
@@ -630,7 +661,7 @@ footer .downline
     footer .vac
     {
         margin-right: 10vw;
-        top: -85px;
+        top: -75px;
     }
     footer .vac ul li
     {
@@ -644,7 +675,7 @@ footer .downline
     footer .social
     {
         margin-right: 12vw;
-        top: -85px;
+        top: -70px;
     }
     footer .social ul li
     {
@@ -669,7 +700,7 @@ footer .downline
     footer .vac
     {
         margin-right: 8vw;
-        top: -85px;
+        top: -75px;
     }
     footer .vac ul li
     {
@@ -683,7 +714,7 @@ footer .downline
     footer .social
     {
         margin-right: 10vw;
-        top: -85px;
+        top: -69px;
     }
     footer .social ul li
     {
@@ -758,4 +789,10 @@ footer .downline
     {
         font-size: 10px;
     }
+}
+
+
+.content
+{
+    min-height: calc(100vh - 435px);
 }
