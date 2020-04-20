@@ -353,7 +353,6 @@ body
     text-align: center;
     z-index: 3;
 }
-.close:hover {background: #e6e6ff;}
 
 .vacs
 {
@@ -416,4 +415,64 @@ body
     {
         width: 60vw;
     }
+}
+
+.admin .job .settings
+{
+    width: 20px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 3px;
+}
+
+.admin .job .settings a
+{
+    padding: 2px;
+    display: flex;
+    background: #3AB9DA;
+    border-radius: 5px;
+}
+
+.admin .job
+{
+    padding-bottom: 12px;
+}
+
+.jobAdd
+{
+    border: 2px solid #3AB9DA;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 210px;
+}
+
+.jobAdd div
+{
+    width: 50px;
+    height: 50px;
+
+}
+
+.more a:hover
+{
+    background: #4AC9EA;
+}
+
+.admin .job .settings a:hover
+{
+    background: #4AC9EA!important;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.25);
+}
+
+.close:hover
+{
+    background: #4AC9EA;
+}
+
+.jobAdd:hover div svg .circle
+{
+    fill: #4AC9EA;
 }
