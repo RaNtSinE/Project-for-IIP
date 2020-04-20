@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -55,7 +55,7 @@
       <workItem from="1587230866759" duration="2820000" />
       <workItem from="1587282460169" duration="23888000" />
       <workItem from="1587364212758" duration="4802000" />
-      <workItem from="1587387986635" duration="5050000" />
+      <workItem from="1587387986635" duration="11191000" />
     </task>
     <servers />
   </component>
@@ -71,6 +71,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587189076699" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1587396285767">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587396285767" />
     <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1587284965260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

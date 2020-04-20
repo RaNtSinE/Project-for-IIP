@@ -1,0 +1,140 @@
+label
+{
+    display: none;
+}
+
+.changeJob
+{
+    background: #E3EFF2;
+    border: 2px solid #3AB9DA;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    max-width: 800px;
+    width: 80vw;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.form-control
+{
+    border: none;
+    max-width: calc(800px - 143px);
+    width: calc(-143px + 80vw);
+    margin-right: auto;
+    margin-left: 60px;
+    padding-left: 20px;
+
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    color: #313131;
+
+    resize: none;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #c2c2c2;
+}
+
+.name
+{
+    height: 40px;
+    margin-top: 40px;
+}
+
+.info
+{
+    margin-top: 21px;
+    padding-top: 14px;
+    height: 80px;
+}
+
+.treb
+{
+    margin-top: 21px;
+    padding-top: 14px;
+    height: 165px;
+}
+
+.but
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    margin-top: 150px;
+    background: #3AB9DA;
+    border: none;
+    cursor: pointer;
+
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.but:hover
+{
+    background: #4AC9EA;
+}
+
+.del
+{
+    margin-left: 60px;
+    margin-top: 153px;
+}
+
+
+.can
+{
+    float: right;
+    margin-right: 15px;
+    padding: 10px 20px;
+}
+
+.sav
+{
+    float: right;
+    margin-right: 60px;
+    padding: 10px 10px;
+
+}
+
+@media(max-width:650px)
+{
+    .del
+    {
+        float: none;
+        display: flex;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sav
+    {
+        float: none;
+        display: flex;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .can
+    {
+        float: none;
+        display: flex;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
