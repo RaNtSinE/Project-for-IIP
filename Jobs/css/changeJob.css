@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 body
 {
     background: #F3F3F3;
@@ -10,7 +12,7 @@ label
 
 .changeJob
 {
-    background: #E3EFF2;
+    background: #3AB9DA;
     border: 2px solid #3AB9DA;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -21,6 +23,12 @@ label
     margin: auto;
     margin-top: 60px;
     margin-bottom: 60px;
+    padding-bottom: 83px;
+}
+
+.addJob
+{
+    background: #E3EFF2;
 }
 
 .form-control
@@ -46,20 +54,20 @@ label
     color: #c2c2c2;
 }
 
-.name
+input[name]
 {
     height: 40px;
     margin-top: 40px;
 }
 
-.info
+#id_description
 {
     margin-top: 21px;
     padding-top: 14px;
     height: 80px;
 }
 
-.treb
+#id_content
 {
     margin-top: 21px;
     padding-top: 14px;
@@ -78,27 +86,34 @@ label
     align-items: center;
     text-align: center;
 
-    color: #FFFFFF;
+    color: #3E3E3E;
 
-    margin-top: 150px;
-    background: #3AB9DA;
+    margin-top: 21px;
+    background: #FFFFFF;
     border: none;
     cursor: pointer;
 
-    padding: 7px 20px;
+    padding: 10px 21px;
     border-radius: 5px;
     margin-bottom: 40px;
 }
 
+.addJob .but
+{
+    background: #3AB9DA;
+    color: #FFFFFF;
+}
+
 .but:hover
 {
-    background: #4AC9EA;
+    background: #DFDFDF;
 }
 
 .del
 {
+    float: left;
     margin-left: 60px;
-    margin-top: 153px;
+    margin-top: 21px;
 }
 
 
@@ -106,7 +121,7 @@ label
 {
     float: right;
     margin-right: 15px;
-    padding: 10px 20px;
+    padding: 10px 26px;
 }
 
 .sav
@@ -121,11 +136,12 @@ label
 {
     .del
     {
+        width: 77px;
         float: none;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        margin-top: 50px;
+        margin-top: 40px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -141,8 +157,14 @@ label
         margin-right: auto;
     }
 
+    .addJob .sav
+    {
+        margin-top: 40px;
+    }
+
     .can
     {
+        width: 66px;
         float: none;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -150,5 +172,10 @@ label
         margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .changeJob
+    {
+        padding-bottom: 0px;
     }
 }

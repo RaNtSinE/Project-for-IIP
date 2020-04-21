@@ -1,5 +1,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 
 body
 {
@@ -139,6 +141,8 @@ body
     line-height: 18px;
 
     color: #313131;
+
+    overflow-x: auto;
 }
 
 .jobs .more
