@@ -30,19 +30,6 @@ $.ajaxSetup({
         }
     }
 });
-
-    $.ajax({
-
-        url: 'http://vegasaur.pythonanywhere.com/test',
-        type: 'POST',
-        crossDomain: true,
-        dataType: 'jsonp',
-        success: function (data, textStatus) { // вешаем свой обработчик на функцию success
-            $.each(data, function(i, val) {    // обрабатываем полученные данные
-                alert(data.Username)
-            });
-        }
-    });
 }
 
 f();
