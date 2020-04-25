@@ -53,7 +53,7 @@ for (
         $.ajax({
             type: "POST",
             url: "http://vegasaur.pythonanywhere.com/news",
-            data: {if: j, name: name, content: content }
+            data: {id: j, name: name, content: content }
         });
     });
 }
