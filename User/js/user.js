@@ -43,6 +43,7 @@ for (
     i < document.getElementsByClassName("sav").length;
     i++
 ) {
+    let j = i;
     document.getElementsByClassName("sav")
         [i].addEventListener("click", function() {
          name = this.parentNode.getElementsByClassName("form-control")[0].value;
@@ -52,7 +53,7 @@ for (
         $.ajax({
             type: "POST",
             url: "http://vegasaur.pythonanywhere.com/news",
-            data: { name: name, content: content }
+            data: {if: j, name: name, content: content }
         });
     });
 }
