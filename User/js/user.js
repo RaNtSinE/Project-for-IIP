@@ -52,7 +52,7 @@ for (
         // alert(content);
         $.ajax({
             type: "POST",
-            url: "http://vegasaur.pythonanywhere.com/news",
+            url: "http://vegasaur.pythonanywhere.com/test",
             data: {id: j, name: name, content: content }
         });
     });
