@@ -5,6 +5,7 @@ for (
 ) {
     document.getElementsByClassName("more")
         [i].addEventListener("click", function() {
+        alert(i);
         this.parentNode.classList.add("open");
     });
 }

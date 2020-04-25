@@ -31,18 +31,29 @@ $.ajaxSetup({
     }
 });
 
-    $.ajax({
-
-        url: 'http://vegasaur.pythonanywhere.com/test',
-        type: 'POST',
-        crossDomain: true,
-        dataType: 'jsonp',
-        success: function (data, textStatus) { // вешаем свой обработчик на функцию success
-            $.each(data, function(i, val) {    // обрабатываем полученные данные
-                alert(data.Username)
-            });
-        }
-    });
 }
 
 f();
+
+let name;
+let content;
+
+for (
+    var i = 0;
+    i < document.getElementsByClassName("sav").length;
+    i++
+) {
+    document.getElementsByClassName("sav")
+        [i].addEventListener("click", function() {
+         name = this.parentNode.getElementsByClassName("form-control")[0].value;
+        // alert(name);
+        content = this.parentNode.getElementsByClassName("form-control")[1].value;
+        // alert(content);
+        $.ajax({
+            type: "POST",
+            url: "http://vegasaur.pythonanywhere.com/news",
+            data: { name: name, content: content }
+        });
+    });
+}
+
