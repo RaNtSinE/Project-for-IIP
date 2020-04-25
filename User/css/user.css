@@ -84,11 +84,16 @@ label
     margin-bottom: 10px;
 }
 
+.sav
+{
+    float: left;
+}
+
 .add
 {
     float: right;
     position: relative;
-    top: -238px;
+    top: -143px;
     right: 11.5vw;
 }
 
