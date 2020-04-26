@@ -42,6 +42,11 @@ label
     height: calc(550px + -23vw);
 }
 
+.block_id
+{
+    display: none!important;
+}
+
 .but
 {
     font-family: Roboto;
@@ -91,11 +96,13 @@ label
 
 .add
 {
+    display: flex;
     float: right;
     position: relative;
     top: -143px;
     right: 11.5vw;
 }
+
 
 .form-control::-webkit-input-placeholder {
     color: #c2c2c2;

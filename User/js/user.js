@@ -35,26 +35,90 @@ $.ajaxSetup({
 
 f();
 
-let name;
-let content;
 
-for (
-    var i = 0;
-    i < document.getElementsByClassName("sav").length;
-    i++
-) {
-    let j = i;
-    document.getElementsByClassName("sav")
-        [i].addEventListener("click", function() {
-         name = this.parentNode.getElementsByClassName("form-control")[0].value;
-        // alert(name);
-        content = this.parentNode.getElementsByClassName("form-control")[1].value;
-        // alert(content);
-        $.ajax({
-            type: "POST",
-            url: "http://vegasaur.pythonanywhere.com/test",
-            data: {id: j, name: name, content: content }
-        });
-    });
+let saveBtns = document.getElementsByClassName("sav");
+let delBtns = document.getElementsByClassName("del");
+let check = [];
+
+
+function postBlock() {
+    saveBtns = document.getElementsByClassName("sav");
+    for (let i = 0; i < saveBtns.length; i++)
+    {
+        let j = i;
+
+        if(check[i] !== 1)
+        {
+            check[i] = 1;
+            saveBtns[i].addEventListener("click",function () {
+                let infoblock = this.parentNode.getElementsByClassName("form-control");
+                $.ajax({
+                    type: "POST",
+                    url: "http://vegasaur.pythonanywhere.com/user/add_block",
+                    data: {block_id: j, name: infoblock[0].value, content: infoblock[1].value }
+                });
+            });
+        }
+    }
 }
 
+function delBlock() {
+    delBtns = document.getElementsByClassName("del");
+    for (let i = 0; i < delBtns.length; i++)
+    {
+        let j = i;
+        delBtns[i].addEventListener("click",function () {
+            $(this).parent().remove();
+            check[j] = 0;
+        });
+
+    }
+}
+
+postBlock();
+delBlock();
+
+let newdiv = document.createElement("div");
+newdiv.innerHTML = "    <div class=\"userInfo\">\n" +
+    "        <a class=\"but del\">\n" +
+    "            <svg width=\"29\" height=\"29\" viewBox=\"0 0 29 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "                <g clip-path=\"url(#clip0)\">\n" +
+    "                    <path d=\"M17.1568 14.5229L28.4489 3.23057C29.1837 2.49604 29.1837 1.30842 28.4489 0.573902C27.7144 -0.16062 26.5267 -0.16062 25.7922 0.573902L14.4998 11.8663L3.20781 0.573902C2.47295 -0.16062 1.28567 -0.16062 0.551149 0.573902C-0.183716 1.30842 -0.183716 2.49604 0.551149 3.23057L11.8432 14.5229L0.551149 25.8153C-0.183716 26.5498 -0.183716 27.7374 0.551149 28.472C0.917206 28.8384 1.39852 29.0224 1.87948 29.0224C2.36045 29.0224 2.84141 28.8384 3.20781 28.472L14.4998 17.1796L25.7922 28.472C26.1586 28.8384 26.6396 29.0224 27.1205 29.0224C27.6015 29.0224 28.0825 28.8384 28.4489 28.472C29.1837 27.7374 29.1837 26.5498 28.4489 25.8153L17.1568 14.5229Z\" fill=\"white\"/>\n" +
+    "                </g>\n" +
+    "                <defs>\n" +
+    "                    <clipPath id=\"clip0\">\n" +
+    "                        <rect width=\"29\" height=\"29\" fill=\"white\"/>\n" +
+    "                    </clipPath>\n" +
+    "                </defs>\n" +
+    "            </svg>\n" +
+    "\n" +
+    "        </a>\n" +
+    "        <div>\n" +
+    "            <p>\n" +
+    "                <label for=\"id_name\"></label>\n" +
+    "                <input type=\"text\" name=\"name\" maxlength=\"100\" class=\"form-control\" required id=\"id_name\"\n" +
+    "                       placeholder=\"Имя блока\">\n" +
+    "            </p>\n" +
+    "            <p>\n" +
+    "                <label for=\"id_content\"></label>\n" +
+    "                <textarea name=\"content\" cols=\"40\" rows=\"10\" class=\"form-control\" required id=\"id_content\"></textarea>\n" +
+    "            </p>\n" +
+    "            <p>\n" +
+    "                <label for=\"id_block\"></label>\n" +
+    "                <input name=\"block_id\" class=\"form-control block_id\" required id=\"id_block\">\n" +
+    "            </p>\n"+
+    "            <a class=\"but sav\">Сохранить изменения</a>\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </div>";
+
+
+var $block = $(newdiv).clone();
+
+$('.add').click(function() {
+    $(this).before($block.clone());
+
+    postBlock();
+    delBlock();
+
+});
