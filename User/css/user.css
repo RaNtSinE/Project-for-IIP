@@ -42,11 +42,6 @@ label
     height: calc(550px + -23vw);
 }
 
-.block_id
-{
-    display: none!important;
-}
-
 .but
 {
     font-family: Roboto;

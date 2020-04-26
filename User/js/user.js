@@ -105,7 +105,7 @@ newdiv.innerHTML = "    <div class=\"userInfo\">\n" +
     "            </p>\n" +
     "            <p>\n" +
     "                <label for=\"id_block\"></label>\n" +
-    "                <input name=\"block_id\" class=\"form-control block_id\" required id=\"id_block\">\n" +
+    "                <input name=\"block_id\" class=\"form-control block_id\" required id=\"id_block\" type=\"hidden\">\n" +
     "            </p>\n"+
     "            <a class=\"but sav\">Сохранить изменения</a>\n" +
     "\n" +
