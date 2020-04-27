@@ -52,14 +52,26 @@ function addPostListeners() {
             check[i] = 1;
             saveBtns[i].addEventListener("click",function () {
                 let infoblock = this.parentNode.getElementsByClassName("form-control");
-                var request = $.ajax({
-                    type: "POST",
-                    url: "/add_block",
-                    data: {name: infoblock[0].value, content: infoblock[1].value }
-                });
-                request.done(function(block_id){
-                    infoblock[2].value = block_id;
-                })
+                if (infoblock[2].value !== "-1")
+                {
+                    $.ajax({
+                        type: "POST",
+                        url: "/add_block",
+                        data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
+                    });
+                }
+                else
+                {
+                    var request = $.ajax({
+                        type: "POST",
+                        url: "/add_block",
+                        data: {name: infoblock[0].value, content: infoblock[1].value }
+                    });
+                    request.done(function(block_id){
+                        infoblock[2].value = block_id;
+                    })
+                }
+
             });
         }
     }
@@ -109,7 +121,7 @@ newdiv.innerHTML = "    <div class=\"userInfo\">\n" +
     "        <div>\n" +
     "            <input type=\"text\" name=\"name\" maxlength=\"100\" class=\"form-control\" placeholder=\"Имя блока\">\n" +
     "            <textarea name=\"content\" cols=\"40\" rows=\"10\" class=\"form-control block_content\" content></textarea>\n" +
-    "            <input name=\"block_id\" class=\"form-control block_id\" type=\"hidden\">\n" +
+    "            <input name=\"block_id\" class=\"form-control block_id\" type=\"hidden\" value=\"-1\">\n" +
     "            <a class=\"but sav\">Сохранить изменения</a>\n" +
     "        </div>\n" +
     "    </div>";
