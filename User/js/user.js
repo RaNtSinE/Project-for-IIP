@@ -55,7 +55,7 @@ function addPostListeners() {
                 var request = $.ajax({
                     type: "POST",
                     url: "/add_block",
-                    data: {block_id: j, name: infoblock[0].value, content: infoblock[1].value }
+                    data: {name: infoblock[0].value, content: infoblock[1].value }
                 });
                 request.done(function(block_id){
                     infoblock[2].value = block_id;
@@ -79,7 +79,7 @@ function addDeleteListeners() {
             var request = $.ajax({
                 url: "/delete_block",
                 type: "POST",
-                data: {block_id : infoblock[2]}
+                data: {block_id : infoblock[2].value}
             });
             request.done(function(msg) {
                 alert(msg);
