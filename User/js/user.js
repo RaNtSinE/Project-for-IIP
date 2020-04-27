@@ -65,10 +65,11 @@ function addPostListeners() {
                     var request = $.ajax({
                         type: "POST",
                         url: "/user/add_block",
+                        dataType: 'json',
                         data: {name: infoblock[0].value, content: infoblock[1].value }
                     });
-                    request.done(function(block_id){
-                        infoblock[2].value = block_id;
+                    request.done(function(data){
+                        infoblock[2].value = data.block_id;
                     })
                 }
 
