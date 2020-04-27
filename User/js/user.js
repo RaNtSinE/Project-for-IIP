@@ -56,7 +56,7 @@ function addPostListeners() {
                 {
                     $.ajax({
                         type: "POST",
-                        url: "/add_block",
+                        url: "/edit_block",
                         data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
                     });
                 }
