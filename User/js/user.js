@@ -56,7 +56,7 @@ function addPostListeners() {
                 {
                     $.ajax({
                         type: "POST",
-                        url: "/edit_block",
+                        url: "/user/edit_block",
                         data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
                     });
                 }
@@ -64,7 +64,7 @@ function addPostListeners() {
                 {
                     var request = $.ajax({
                         type: "POST",
-                        url: "/add_block",
+                        url: "/user/add_block",
                         data: {name: infoblock[0].value, content: infoblock[1].value }
                     });
                     request.done(function(block_id){
@@ -89,7 +89,7 @@ function addDeleteListeners() {
             check[j] = 0;
 
             var request = $.ajax({
-                url: "/delete_block",
+                url: "/user/delete_block",
                 type: "POST",
                 data: {block_id : infoblock[2].value}
             });
