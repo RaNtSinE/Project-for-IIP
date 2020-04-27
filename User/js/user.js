@@ -36,13 +36,13 @@ $.ajaxSetup({
 f();
 
 
-let saveBtns = document.getElementsByClassName("sav");
-let delBtns = document.getElementsByClassName("del");
+let saveBtns = $('.sav');
+let delBtns = $('.del');
 let check = [];
 
 
-function postBlock() {
-    saveBtns = document.getElementsByClassName("sav");
+function addPostListeners() {
+    saveBtns = $('.sav');
     for (let i = 0; i < saveBtns.length; i++)
     {
         let j = i;
@@ -52,31 +52,44 @@ function postBlock() {
             check[i] = 1;
             saveBtns[i].addEventListener("click",function () {
                 let infoblock = this.parentNode.getElementsByClassName("form-control");
-                $.ajax({
+                var request = $.ajax({
                     type: "POST",
-                    url: "http://vegasaur.pythonanywhere.com/user/add_block",
+                    url: "/add_block",
                     data: {block_id: j, name: infoblock[0].value, content: infoblock[1].value }
                 });
+                request.done(function(block_id){
+                    infoblock[2].value = block_id;
+                })
             });
         }
     }
 }
 
-function delBlock() {
-    delBtns = document.getElementsByClassName("del");
+function addDeleteListeners() {
+    delBtns = $('.del');
     for (let i = 0; i < delBtns.length; i++)
     {
         let j = i;
         delBtns[i].addEventListener("click",function () {
+            let infoblock = this.parentNode.getElementsByClassName("form-control");
+
             $(this).parent().remove();
             check[j] = 0;
-        });
 
+            var request = $.ajax({
+                url: "/delete_block",
+                type: "POST",
+                data: {block_id : infoblock[2]}
+            });
+            request.done(function(msg) {
+                alert(msg);
+            });
+        });
     }
 }
 
-postBlock();
-delBlock();
+addPostListeners();
+addDeleteListeners();
 
 let newdiv = document.createElement("div");
 newdiv.innerHTML = "    <div class=\"userInfo\">\n" +
@@ -94,21 +107,10 @@ newdiv.innerHTML = "    <div class=\"userInfo\">\n" +
     "\n" +
     "        </a>\n" +
     "        <div>\n" +
-    "            <p>\n" +
-    "                <label for=\"id_name\"></label>\n" +
-    "                <input type=\"text\" name=\"name\" maxlength=\"100\" class=\"form-control\" required id=\"id_name\"\n" +
-    "                       placeholder=\"Имя блока\">\n" +
-    "            </p>\n" +
-    "            <p>\n" +
-    "                <label for=\"id_content\"></label>\n" +
-    "                <textarea name=\"content\" cols=\"40\" rows=\"10\" class=\"form-control\" required id=\"id_content\"></textarea>\n" +
-    "            </p>\n" +
-    "            <p>\n" +
-    "                <label for=\"id_block\"></label>\n" +
-    "                <input name=\"block_id\" class=\"form-control block_id\" required id=\"id_block\" type=\"hidden\">\n" +
-    "            </p>\n"+
+    "            <input type=\"text\" name=\"name\" maxlength=\"100\" class=\"form-control\" placeholder=\"Имя блока\">\n" +
+    "            <textarea name=\"content\" cols=\"40\" rows=\"10\" class=\"form-control block_content\" content></textarea>\n" +
+    "            <input name=\"block_id\" class=\"form-control block_id\" type=\"hidden\">\n" +
     "            <a class=\"but sav\">Сохранить изменения</a>\n" +
-    "\n" +
     "        </div>\n" +
     "    </div>";
 
@@ -118,7 +120,7 @@ var $block = $(newdiv).clone();
 $('.add').click(function() {
     $(this).before($block.clone());
 
-    postBlock();
-    delBlock();
+    addPostListeners();
+    addDeleteListeners();
 
 });

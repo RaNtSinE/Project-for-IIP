@@ -37,7 +37,7 @@ label
     resize: none;
 }
 
-#id_content
+.block_content
 {
     height: calc(550px + -23vw);
 }
