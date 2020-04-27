@@ -93,8 +93,7 @@ function addDeleteListeners() {
                 type: "POST",
                 data: {block_id : infoblock[2].value}
             });
-            request.done(function(msg) {
-                alert(msg);
+            request.done(function(status) {
             });
         });
     }
