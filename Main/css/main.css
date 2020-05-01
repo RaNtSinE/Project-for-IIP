@@ -171,7 +171,7 @@ button:focus {
 
 .prodCar
 {
-    width: 71%;
+    width: 72.5%;
     margin-left: auto;
     margin-right: 12.5vw;
     margin-top: 25px;
@@ -258,7 +258,7 @@ button:focus {
     height: 4.4vw;
     float: right;
     position: relative;
-    right: -5.5vw;
+    right: -4.5vw;
 
 }
 
