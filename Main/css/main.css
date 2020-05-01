@@ -243,6 +243,12 @@ button:focus {
     left: -8vw;
 }
 
+.content .second .owl-stage-outer
+{
+    width: 69vw;
+    overflow: hidden;
+}
+
 .content .second .owl-nav .owl-prev:hover
 {
     background: url("../img/left2Hover.svg");
@@ -702,7 +708,10 @@ button:focus {
     .jobs .grad .info p {
         padding-top: 3vw;
     }
-
+    .content .second .owl-stage-outer {
+        width: 64vw;
+        overflow: hidden;
+    }
 }
 
 @media(max-width: 750px) {
@@ -866,6 +875,10 @@ button:focus {
     }
     .prodCar {
         width: 73%;
+    }
+    .content .second .owl-stage-outer {
+        width: 63vw;
+        overflow: hidden;
     }
 }
 
