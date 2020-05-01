@@ -259,6 +259,7 @@ button:focus {
     float: right;
     position: relative;
     right: -8vw;
+
 }
 
 .content .second .owl-nav .owl-next:hover
@@ -356,10 +357,12 @@ button:focus {
 {
     width: 15vw;
     padding-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .news .new .newTitle p
 {
-    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -523,6 +526,31 @@ button:focus {
     margin-right: auto;
     width:212px;
     margin-top: 40px;
+}
+
+@media(max-width: 1500px)
+{
+    .news .new .newTitle p {
+        font-size: 1.55vw;
+    }
+    .news .new .newText {
+        height: 5.3vw;
+    }
+    .news .new .newText p {
+        font-size: 1.25vw;
+        line-height: 1.4vw;
+    }
+    .news .new .date p {
+        font-size: 0.9vw;
+    }
+}
+
+@media(max-width: 1300px)
+{
+    .first .item .text {
+        right: 14vw;
+    }
+
 }
 
 @media(max-width:1000px)
