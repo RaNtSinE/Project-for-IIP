@@ -171,7 +171,7 @@ button:focus {
 
 .prodCar
 {
-    width: 73%;
+    width: 71%;
     margin-left: auto;
     margin-right: 12.5vw;
     margin-top: 25px;
@@ -258,7 +258,7 @@ button:focus {
     height: 4.4vw;
     float: right;
     position: relative;
-    right: -8vw;
+    right: -5.5vw;
 
 }
 
@@ -550,7 +550,9 @@ button:focus {
     .first .item .text {
         right: 14vw;
     }
-
+    .content .second .owl-nav .owl-next {
+        right: -6.5vw;
+    }
 }
 
 @media(max-width:1000px)
@@ -646,7 +648,7 @@ button:focus {
         background-size: 8.4vw;
         width: 8.4vw;
         height: 8.4vw;
-        right: -3.4vw;
+        right: -4vw;
     }
 
     .content .second .owl-nav .owl-next:hover
@@ -703,6 +705,13 @@ button:focus {
 
 }
 
+@media(max-width: 750px) {
+    .content .second .owl-nav .owl-next
+    {
+        right: -5vw;
+    }
+}
+
 @media(max-width: 600px)
 {
     .news .new .newTitle p {
@@ -720,6 +729,10 @@ button:focus {
     .news .new .date p {
         font-size: 2.1vw;
         line-height: 12px;
+    }
+    .content .second .owl-nav .owl-next
+    {
+        right: -5.5vw;
     }
 }
 
@@ -765,10 +778,10 @@ button:focus {
         top: -48vw;
     }
     .products .second .item {
-        width: 65vw;
+        width: 63vw;
     }
     .products .second .item .image {
-        width: 65vw;
+        width: 63vw;
     }
     .products .info .text {
         font-size: 4vw;
@@ -797,7 +810,7 @@ button:focus {
         background-size: 13.4vw;
         width: 13.4vw;
         height: 13.4vw;
-        right: -8.4vw;
+        right: -8vw;
     }
 
     .content .second .owl-nav .owl-next:hover
@@ -850,6 +863,9 @@ button:focus {
         padding-left: 8vw;
         width: 61vw;
         padding-top: 0vw;
+    }
+    .prodCar {
+        width: 73%;
     }
 }
 
