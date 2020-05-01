@@ -114,16 +114,17 @@ button:focus {
 .first .item .item_more
 {
     font-family: Roboto;
+    font-weight: bold;
     font-style: normal;
-    font-weight: normal;
-    font-size: 1.9vw;
+    font-size: 1.3vw;
     line-height: 35px;
+    text-transform: uppercase;
 
     color: #FFFFFF;
 
     position: relative;
-    padding: 1.2vw 3vw;
-    background: #00B1DF;
+    padding: 1.2vw 4vw;
+    background: #3AB9DA;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -271,21 +272,20 @@ button:focus {
 
 .content .where
 {
-
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 15px;
     line-height: 23px;
 
     color: #FFFFFF;
 
-    padding: 15px 50px;
+    padding: 18px 57px;
     background: #3AB9DA;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-
+    text-transform: uppercase;
 }
 
 .content .where:hover
@@ -416,18 +416,18 @@ button:focus {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 15px;
     line-height: 23px;
 
     color: #FFFFFF;
 
-    padding: 15px 22px;
+    padding: 18px 33px;
     background: #3AB9DA;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-
+    text-transform: uppercase;
 }
 
 .content .moreNews:hover
@@ -501,18 +501,18 @@ button:focus {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 15px;
     line-height: 23px;
 
     color: #FFFFFF;
 
-    padding: 15px 34px;
+    padding: 18px 44px;
     background: #3AB9DA;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-
+    text-transform: uppercase;
 }
 
 .content .moree:hover
