@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d46f7015-2a85-4871-ba01-2948ddafcfe1" name="Default Changelist" comment="" />
+    <list default="true" id="d46f7015-2a85-4871-ba01-2948ddafcfe1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +16,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1aLGACljFE9DqWskif8ZJqVmbVd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../News/navbar.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -53,6 +59,8 @@
       <workItem from="1587186781854" duration="6049000" />
       <workItem from="1587230866759" duration="2820000" />
       <workItem from="1587282460169" duration="14271000" />
+      <workItem from="1588410909302" duration="31000" />
+      <workItem from="1588410997458" duration="21000" />
     </task>
     <servers />
   </component>
@@ -64,10 +72,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="733" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587122524622" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1587189076699">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588411015647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587189076699" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588411015647" />
     <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1587284965260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -39,11 +39,11 @@ body
     margin-right: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    background: rgba(197, 234, 243, 0.41);
+    background: #C5EAF3;
     border-radius: 5px;
     padding-bottom: 55px;
-    border: 2px solid #3AB9DA;
     box-sizing: border-box;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .new .date
