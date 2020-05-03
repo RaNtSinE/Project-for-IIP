@@ -490,7 +490,7 @@ body
     background: #4AC9EA;
 }
 
-.jobAdd:hover div svg .circle
+.jobAdd:hover .plus div svg .circle
 {
     fill: #4AC9EA;
 }
