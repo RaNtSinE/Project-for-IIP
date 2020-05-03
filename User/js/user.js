@@ -79,15 +79,31 @@ var listener = function () {
     if(success === 1)
     {
         success = 0;
-        $('.sav').fadeOut(400);
-        $('.suc').delay(400).fadeIn(400);
-        $('.suc').delay(1400).fadeOut(400);
-        $('.sav').delay(2200).fadeIn(400);
+        function opsav()
+        {
+            $('#sav').addClass('closee');
+        }
+        function opsuc()
+        {
+            $('#suc').addClass('openn');
+        }
+        function clsuc()
+        {
+            $('#suc').removeClass('openn');
+        }
+        function clsav()
+        {
+            $('#sav').removeClass('closee');
+        }
+        opsav();
+        setTimeout(opsuc, 500);
+        setTimeout(clsuc, 2000);
+        setTimeout(clsav, 2500);
     }
 };
 
 function addSaveListener() {
-    let saveBtn = $('.sav');
+    let saveBtn = $('#sav');
     blocks = $('.userInfo');
     saveBtn[0].removeEventListener("click", listener, false);
     saveBtn[0].addEventListener("click",listener, false);
@@ -194,7 +210,7 @@ newdiv.innerHTML = "    <div class=\"userInfo\">\n" +
     "                <input type=\"text\" name=\"name\" maxlength=\"200\" class=\"form-control block_name\"\n" +
     "                       placeholder=\"Введите имя блока...\">\n" +
     "\n" +
-    "                <textarea name=\"content\" row class=\"form-control block_content expand\"\n" +
+    "                <textarea name=\"content\" class=\"form-control block_content expand\"\n" +
     "                          placeholder=\"Введите текст блока...\" ></textarea>\n" +
     "                <input name=\"block_id\" class=\"form-control block_id\" type=\"hidden\" value=\"-1\">\n" +
     "        </div>\n" +
