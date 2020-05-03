@@ -67,6 +67,7 @@ input, textarea
     overflow: hidden;
     word-break: break-word;
     margin-top: 8px;
+    white-space: pre-line;
 }
 
 .nologgined .block_content
