@@ -359,12 +359,6 @@ button:focus {
     width: 15vw;
 }
 
-.news .new .newImage
-{
-    height: 8.4vw;
-    overflow-y: hidden;
-}
-
 .news .new .newTitle
 {
     width: 15vw;
@@ -681,11 +675,6 @@ button:focus {
     .news .new .newImage img {
         width: 36vw;
     }
-
-    .news .new .newImage {
-        height: 20.2vw;
-        overflow-y: hidden;
-    }
     .news .new .newTitle {
         width: 36vw;
         padding-top: 5px;
@@ -852,11 +841,6 @@ button:focus {
 
     .news .new .newImage img {
         width: 79vw;
-    }
-
-    .news .new .newImage {
-        height: 44.3vw;
-        overflow-y: hidden;
     }
     .news .new .newTitle {
         width: 79vw;
