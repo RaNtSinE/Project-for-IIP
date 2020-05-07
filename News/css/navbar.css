@@ -82,7 +82,7 @@ p
     height: 50px;
     margin-left: 100px;
     padding-top: 0px;
-    position: fixed;
+
 }
 
 .logo:hover
@@ -786,6 +786,24 @@ footer .downline
     footer .aboutUs
     {
         font-size: 10px;
+    }
+}
+
+@media(max-width: 300px)
+{
+    .logo {
+        width: 150px;
+    }
+    .logo .text {
+        height: 45px;
+        font-size: 13px;
+    }
+    .logo .fox {
+        background: url(../img/Fox.svg);
+        background-repeat: no-repeat;
+        background-size: 75%;
+        margin-top: 12px;
+        margin-left: 0px;
     }
 }
 
