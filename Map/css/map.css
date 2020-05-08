@@ -1,8 +1,8 @@
 #map
 {
     height: 500px;
-    width: 78vw;
-    margin-left: 11vw;
+    width: 84vw;
+    margin-left: 8vw;
     position: absolute!important;
 }
 
@@ -32,7 +32,7 @@
     float: right;
     position: relative;
     top: -500px;
-    right: 100px;
+    right: 7vw;
 }
 
 .content .mabBlock
@@ -53,7 +53,7 @@
 
     color: #313131;
     padding-top: 150px;
-    padding-left: 100px;
+    padding-left: 8vw;
     padding-bottom: 30px;
 }
 
@@ -70,7 +70,7 @@
     .content .info {
         font-size: 25px;
         line-height: 30px;
-        margin-left: 11vw;
+        margin-left: 8vw;
         margin-top: 100px;
     }
     .content .text {
@@ -80,7 +80,7 @@
     }
     .content .image {
         top: -405px;
-        right: 100px;
+        right: 7vw;
         width: 424px;
     }
 
@@ -105,7 +105,7 @@
         white-space: normal;
     }
     .mabBlock .sales {
-        padding-left: 11vw;
+        padding-left: 8vw;
     }
 }
 @media(max-width: 600px)
