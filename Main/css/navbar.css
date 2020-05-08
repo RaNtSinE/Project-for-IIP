@@ -1043,6 +1043,9 @@ footer .downline
 
 @media(max-width: 393px)
 {
+    #letterGhost {
+        width: 100vw;
+    }
     #letterWindow {
         width: 100vw;
     }
