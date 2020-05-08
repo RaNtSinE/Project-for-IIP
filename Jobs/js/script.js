@@ -109,7 +109,7 @@
       {
         $.ajax({
           type: "POST",
-          url: "http://vegasaur.pythonanywhere.com/test_mail",
+          url: "http://vegasaur.pythonanywhere.com/send_email",
           data: {purpose: somePurpose, address: address.value, content: content.value }
         }).done(function(data){
           // alert(JSON.stringify(data));
