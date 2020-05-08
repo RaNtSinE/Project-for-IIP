@@ -812,3 +812,244 @@ footer .downline
 {
     min-height: calc(100vh - 435px);
 }
+
+#letterGhost {
+    right: 0;
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 393px;
+    height: 363px;
+    transition: 0.4s;
+    top: calc(100vh - 363px);
+    overflow: hidden;
+    display: none;
+}
+
+#select-selected.wrong
+{
+    border: 2px solid red;
+    border-top: 2px solid red!important;
+    box-sizing: border-box;
+}
+
+#letterWindow {
+    position: absolute;
+    background: #C5EAF3;
+    border: 1px solid #3AB9DA;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 393px;
+    height: 363px;
+    transition: 0.4s;
+    top: 363px;
+}
+
+#letterGhost.almostOpen
+{
+    display: block;
+}
+
+#letterWindow.letterOpen
+{
+    top: 0;
+}
+
+.custom-select {
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    width: 210px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: #3AB9DA;
+    border-top: transparent!important;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right: 16px solid;
+    border-left: 16px solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+
+
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 8px;
+    border: 1px solid transparent;
+    border-color: #fff transparent transparent transparent;
+    cursor: pointer;
+}
+
+.select-items div
+{
+    padding: 3px 8px;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #3AB9DA;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: #4AC9EA;;
+}
+
+
+
+#letterWindow select option
+{
+    border-top: 1px solid #FFFFFF;
+}
+
+#letterClose
+{
+    float: right;
+    position: relative;
+    top: -36px;
+    right: 10px;
+}
+
+#letterClose a
+{
+    display: flex;
+    padding: 4px;
+    background: #3AB9DA;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#letterClose a:hover
+{
+    background: #4AC9EA;
+}
+
+#message
+{
+    cursor: default;
+    font-family: Roboto;
+    font-size: 13px;
+    position: relative;
+    top: 9px;
+    left: 10px;
+    color: #EF1010;
+    opacity: 0;
+}
+
+#message.wrong
+{
+    opacity: 1;
+}
+
+#letterInputZone {
+    padding: 0px 10px;
+    width: 371px;
+    padding-bottom: 0;
+}
+
+
+#letterAddress, #letterContent {
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 371px;
+    padding-left: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 0px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    color: #313131;
+    resize: none;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+}
+
+#letterAddress.wrong
+{
+    border: 1px solid #EF1010;
+}
+
+#letterAddress.wrong::placeholder
+{
+    color: #CF1010;
+}
+
+#letterContent.wrong
+{
+    border: 1px solid #EF1010;
+}
+
+#letterContent.wrong::placeholder
+{
+    color: #CF1010;
+}
+
+#letterContent
+{
+    margin-top: 10px;
+}
+
+#letterSubmit {
+    float: right;
+    margin-top: 11px;
+    margin-right: 10px;
+}
+#letterSubmit a {
+    background: #3AB9DA;
+    display: flex;
+    padding: 12px 10px;
+    border-radius: 100%;
+}
+
+#letterSubmit a:hover {
+    background: #4AC9EA;
+}
+
+@media(max-width: 393px)
+{
+    #letterWindow {
+        width: 100vw;
+    }
+    #letterInputZone {
+        width: 92.3vw;
+    }
+    #letterAddress, #letterContent {
+        width: 94.3vw;
+    }
+}

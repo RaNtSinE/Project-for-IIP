@@ -813,22 +813,46 @@ footer .downline
     min-height: calc(100vh - 435px);
 }
 
-#letterWindow {
+#letterGhost {
     right: 0;
     position: absolute;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 393px;
+    height: 363px;
+    transition: 0.4s;
     top: calc(100vh - 363px);
+    overflow: hidden;
+    display: none;
+}
+
+#select-selected.wrong
+{
+    border: 2px solid red;
+    border-top: 2px solid red!important;
+    box-sizing: border-box;
+}
+
+#letterWindow {
+    position: absolute;
     background: #C5EAF3;
     border: 1px solid #3AB9DA;
     box-sizing: border-box;
     border-radius: 5px;
     width: 393px;
     height: 363px;
-    display: none;
+    transition: 0.4s;
+    top: 363px;
+}
+
+#letterGhost.almostOpen
+{
+    display: block;
 }
 
 #letterWindow.letterOpen
 {
-    display: block;
+    top: 0;
 }
 
 .custom-select {
@@ -931,8 +955,25 @@ footer .downline
     background: #4AC9EA;
 }
 
+#message
+{
+    cursor: default;
+    font-family: Roboto;
+    font-size: 13px;
+    position: relative;
+    top: 9px;
+    left: 10px;
+    color: #EF1010;
+    opacity: 0;
+}
+
+#message.wrong
+{
+    opacity: 1;
+}
+
 #letterInputZone {
-    padding: 24px 10px;
+    padding: 0px 10px;
     width: 371px;
     padding-bottom: 0;
 }
@@ -959,6 +1000,26 @@ footer .downline
     padding-left: 10px;
 }
 
+#letterAddress.wrong
+{
+    border: 1px solid #EF1010;
+}
+
+#letterAddress.wrong::placeholder
+{
+    color: #CF1010;
+}
+
+#letterContent.wrong
+{
+    border: 1px solid #EF1010;
+}
+
+#letterContent.wrong::placeholder
+{
+    color: #CF1010;
+}
+
 #letterContent
 {
     margin-top: 10px;
@@ -978,4 +1039,17 @@ footer .downline
 
 #letterSubmit a:hover {
     background: #4AC9EA;
+}
+
+@media(max-width: 393px)
+{
+    #letterWindow {
+        width: 100vw;
+    }
+    #letterInputZone {
+        width: 92.3vw;
+    }
+    #letterAddress, #letterContent {
+        width: 94.3vw;
+    }
 }
