@@ -80,25 +80,17 @@ $(document).ready(function () {
                     "<p class='hours'>Часы работы:</p>" +
                     "<p>пн-пт - 9:00 - 18:30</p>" +
                     "<p>сб - 11:00 - 17:00</p>" +
-                    "<p>вск - выходной</p>",
-                iconContent: '<img src="../img/Vector.png" />'}
+                    "<p>вск - выходной</p>"}
             , {
-                // preset: "islands#yellowStretchyIcon",
                     iconLayout: 'default#image',
                     iconImageHref: './img/Vector.png',
-                    // iconImageSize: [40, 40],
-                    // iconImageOffset: [-20, -20],
-                    // Определим интерактивную область над картинкой.
                     iconShape: {
                         type: 'Circle',
                         coordinates: [0, -15],
                         radius: 20
                     },
-                // Отключаем кнопку закрытия балуна.
                 balloonCloseButton: false,
-                // Балун будем открывать и закрывать кликом по иконке метки.
                 hideIconOnBalloonOpen: false,
-
             });
 
         // var placemark = new ymaps.Placemark([56.452639, 84.974935], null, {
