@@ -111,6 +111,8 @@
           type: "POST",
           url: "http://vegasaur.pythonanywhere.com/test_mail",
           data: {purpose: somePurpose, address: address.value, content: content.value }
+        }).done(function(data){
+          // alert(JSON.stringify(data));
         });
       }
     });
