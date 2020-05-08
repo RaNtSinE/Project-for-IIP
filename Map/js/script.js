@@ -5,3 +5,12 @@
     $('#ham').removeClass('active');
   });
 
+    $('.letter').on('click',function ()
+    {
+      $('#letterWindow').toggleClass('letterOpen');
+    });
+
+    $('#letterClose').on('click',function ()
+    {
+      $('#letterWindow').removeClass('letterOpen');
+    });

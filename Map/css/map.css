@@ -6,18 +6,18 @@
     position: absolute!important;
 }
 
-.content .info
-{
+.content .info {
+    position: relative;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 35px;
     white-space: pre-line;
-    margin-left: 200px;
-    margin-top: 150px;
-
-    color: #FFFFFF;
+    margin-top: 50px;
+    margin-right: calc(46vw - 500px);
+    color: #3E3E3E;
+    float: right;
 }
 
 .content .text
@@ -27,19 +27,15 @@
     margin-top: 60px;
 }
 
-.content .image
-{
-    float: right;
-    position: relative;
-    top: -500px;
-    right: 7vw;
+.content .image {
+    margin-left: calc(44vw - 480px);
+    margin-top: 100px;
 }
 
-.content .mabBlock
-{
+.content .mabBlock {
     background: #F3F3F3;
     width: 100%;
-    margin-top: 200px;
+    margin-top: 140px;
     padding-bottom: 200px;
 }
 
@@ -70,8 +66,8 @@
     .content .info {
         font-size: 25px;
         line-height: 30px;
-        margin-left: 8vw;
-        margin-top: 100px;
+        top: -30px;
+        margin-right: calc(56vw - 474px);
     }
     .content .text {
         font-size: 15px;
@@ -79,9 +75,8 @@
         margin-top: 15px;
     }
     .content .image {
-        top: -405px;
-        right: 7vw;
         width: 424px;
+        margin-left: calc(53vw - 465px);
     }
 
     .content .image img
@@ -100,6 +95,8 @@
     }
     .content .info {
         width: 55vw;
+        float: none;
+        margin-left: 8vw;
     }
     .content .text {
         white-space: normal;
