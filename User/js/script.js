@@ -16,7 +16,11 @@
         setTimeout(function ()
         {
           $('#letterWindow').addClass('letterOpen');
-        }, 10);
+        }, 0.0000001);
+        setTimeout(function ()
+        {
+          $('#letterGhost').addClass('almostOpen');
+        }, 400);
       }
       else
       {
@@ -26,8 +30,16 @@
         {
           $('#letterGhost').removeClass('almostOpen');
         }, 400);
+        $('#select-selected').removeClass('wrong');
+        $('#letterAddress').removeClass('wrong');
+        let address = document.getElementById("letterAddress");
+        address.placeholder = "Ваш почтовый адрес";
+        $('#letterContent').removeClass('wrong');
+        let content = document.getElementById("letterContent");
+        content.placeholder = "Текст сообщения";
+        $('#message').removeClass('wrong');
+        $('#message').removeClass('done');
       }
-
 
       // if(open === 0)
       // {
@@ -43,11 +55,21 @@
 
     $('#letterClose').on('click',function ()
     {
+      open = 0;
       $('#letterWindow').removeClass('letterOpen');
       setTimeout(function ()
       {
         $('#letterGhost').removeClass('almostOpen');
       }, 400);
+      $('#select-selected').removeClass('wrong');
+      $('#letterAddress').removeClass('wrong');
+      let address = document.getElementById("letterAddress");
+      address.placeholder = "Ваш почтовый адрес";
+      $('#letterContent').removeClass('wrong');
+      let content = document.getElementById("letterContent");
+      content.placeholder = "Текст сообщения";
+      $('#message').removeClass('wrong');
+      $('#message').removeClass('done');
       // open = 0;
       // $('#letterWindow').fadeOut(400);
     });
@@ -56,6 +78,9 @@
       let address = document.getElementById("letterAddress");
       let purpose = document.getElementsByClassName("select-selected");
       let content = document.getElementById("letterContent");
+      let msg = document.getElementById("message");
+      $('#message').removeClass('wrong');
+      $('#message').removeClass('done');
       let somePurpose;
       let success = 1;
       if(purpose[0].innerHTML === "Вопрос по продукту")
@@ -102,6 +127,7 @@
           if(address.value.search(pattern) != 0){
             $('#letterAddress').addClass('wrong');
             $('#message').addClass('wrong');
+            msg.innerHTML = "Некорректный email";
             success = 0;
         }
       }
@@ -109,10 +135,27 @@
       {
         $.ajax({
           type: "POST",
-          url: "http://vegasaur.pythonanywhere.com/send_email",
+          url: "/send_email",
           data: {purpose: somePurpose, address: address.value, content: content.value }
         }).done(function(data){
           // alert(JSON.stringify(data));
+          if(data.email_sent === true)
+          {
+            $('#message').addClass('done');
+            msg.innerHTML = "Сообщение отправлено ";
+            setTimeout(function ()
+            {
+              $('#message').removeClass('done');
+            }, 2000);
+          }
+          else
+          {
+            $('#message').addClass('wrong');
+            msg.innerHTML = "Ошибка отправки, " + data.error_msg;
+          }
+        }).fail(function () {
+          $('#message').addClass('wrong');
+          msg.innerHTML = "Сервер недоступен";
         });
       }
     });
