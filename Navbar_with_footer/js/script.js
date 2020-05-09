@@ -137,7 +137,7 @@
           data: {purpose: somePurpose, address: address.value, content: content.value }
         }).done(function(data){
           // alert(JSON.stringify(data));
-          if(data.email_sent === "True")
+          if(data.email_sent === true)
           {
             $('#message').addClass('done');
             msg.innerHTML = "Сообщение отправлено ";
