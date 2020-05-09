@@ -38,8 +38,7 @@
         let content = document.getElementById("letterContent");
         content.placeholder = "Текст сообщения";
         $('#message').removeClass('wrong');
-        $('#done').removeClass('done');
-        $('#error').removeClass('error');
+        $('#message').removeClass('done');
       }
 
       // if(open === 0)
@@ -70,8 +69,7 @@
       let content = document.getElementById("letterContent");
       content.placeholder = "Текст сообщения";
       $('#message').removeClass('wrong');
-      $('#done').removeClass('done');
-      $('#error').removeClass('error');
+      $('#message').removeClass('done');
       // open = 0;
       // $('#letterWindow').fadeOut(400);
     });
