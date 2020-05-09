@@ -79,6 +79,8 @@
       let purpose = document.getElementsByClassName("select-selected");
       let content = document.getElementById("letterContent");
       let msg = document.getElementById("message");
+      $('#message').removeClass('wrong');
+      $('#message').removeClass('done');
       let somePurpose;
       let success = 1;
       if(purpose[0].innerHTML === "Вопрос по продукту")
@@ -141,6 +143,10 @@
           {
             $('#message').addClass('done');
             msg.innerHTML = "Сообщение отправлено ";
+            setTimeout(function ()
+            {
+              $('#message').removeClass('done');
+            }, 2000);
           }
           else
           {
