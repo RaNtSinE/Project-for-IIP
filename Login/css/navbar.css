@@ -970,13 +970,6 @@ footer .downline
 #message.wrong
 {
     opacity: 1;
-    color: #EF1010;
-}
-
-#message.done
-{
-    color: #1A99BA;
-    opacity: 1;
 }
 
 #letterInputZone {
