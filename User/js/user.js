@@ -35,8 +35,6 @@ $.ajaxSetup({
 
 f();
 
-
-let saveBtns = $('.sav');
 let delBtns = $('.del');
 let blocks = $('.userInfo');
 let check = [];
@@ -53,27 +51,30 @@ var listener = function () {
         {
             check[i] = 0;
             let infoblock = blocks[j].getElementsByClassName("form-control");
-            if (infoblock[2].value !== "-1")
+            if (infoblock[0] !== "" && infoblock[1] !== "")
             {
-                $.ajax({
-                    type: "POST",
-                    url: "/user/edit_block",
-                    data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
-                });
+                if (infoblock[2].value !== "-1")
+                {
+                    $.ajax({
+                        type: "POST",
+                        url: "/user/edit_block",
+                        data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
+                    });
+                }
+                else
+                {
+                    var request = $.ajax({
+                        type: "POST",
+                        url: "/user/add_block",
+                        dataType: 'json',
+                        data: {name: infoblock[0].value, content: infoblock[1].value }
+                    });
+                    request.done(function(data){
+                        infoblock[2].value = data.block_id;
+                    });
+                }
+                success = 1;
             }
-            else
-            {
-                var request = $.ajax({
-                    type: "POST",
-                    url: "/user/add_block",
-                    dataType: 'json',
-                    data: {name: infoblock[0].value, content: infoblock[1].value }
-                });
-                request.done(function(data){
-                    infoblock[2].value = data.block_id;
-                });
-            }
-            success = 1;
         }
     }
     if(success === 1)
