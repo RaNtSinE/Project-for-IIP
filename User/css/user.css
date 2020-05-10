@@ -275,21 +275,20 @@ input, textarea
     right: 0;
     left: 0;
     margin: auto;
-    padding-bottom: 10px;
-    background: #3AB9DA;
-    border: 1px solid #3AB9DA;
+    padding-bottom: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-
+    border-radius: 5px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
-
-    color: #3E3E3E;
-
+    text-align: center;
+    color: #313131;
+    background: #C5EAF3;
     border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .open .shading {display: block;}
@@ -298,68 +297,68 @@ input, textarea
 
 .close {
     display: none;
-    width: 62px;
+    width: 68px;
     float: right;
-    color: #3E3E3E;
-    padding: 7px 3px;
+    color: #FFF;
+    padding: 7px 11px;
     text-decoration: none;
     font-family: "Roboto";
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
-    margin-right: 51px;
+    margin-right: 32px;
     margin-top: 20px;
     text-align: center;
     z-index: 3;
-    background: #F3F3F3;
+    background: #3AB9DA;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    text-transform: uppercase;
 }
 
-.delete
-{
+.delete {
     display: none;
     float: left;
-    width: 62px;
-    color: #3E3E3E;
-    padding: 7px 3px;
+    width: 68px;
+    color: #FFF;
+    padding: 7px 12px;
     text-decoration: none;
     font-family: "Roboto";
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
-    margin-left: 51px;
+    margin-left: 34px;
     margin-top: 20px;
     text-align: center;
     z-index: 3;
-    background: #F3F3F3;
+    background: #3AB9DA;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    text-transform: uppercase;
 }
 
 .close:hover,.delete:hover
 {
-    background: #D3D3D3;
+    background: #4AC9EA;
 }
 
-.right
-{
-    font-size: 20px;
+.right {
+    width: 224px;
     line-height: 23px;
-
-    color: #FFFFFF;
     text-align: center;
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
 }
 
-.warn
-{
+.warn {
     font-size: 15px;
     line-height: 18px;
-
-    color: #FFFFFF;
     text-align: center;
     margin-top: 7px;
+    color: #3E3E3E;
+    font-weight: normal;
 }
 
 .nologgined
