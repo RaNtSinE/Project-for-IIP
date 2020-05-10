@@ -461,6 +461,11 @@ body
     min-height: 210px;
 }
 
+.jobAdd:hover div svg path:first-child
+{
+    fill: #4AC9EA;
+}
+
 .jobAdd div
 {
     width: 50px;
