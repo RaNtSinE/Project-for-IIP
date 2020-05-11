@@ -19,5 +19,17 @@
                 }, 100);
             }
         }, 1000);
+ $('.go-auth').on('click',function(){
+     win = document.getElementsByClassName("preLogin");
+     login = document.getElementById("login")
+     login.classList.add("loginOpen");
+     setTimeout(function () {
+         win[0].classList.add("almostHide");
+         setTimeout(function () {
+             win[0].classList.add("hide");
+         }, 500)
+     }, 100);
+
+ });
 
 
