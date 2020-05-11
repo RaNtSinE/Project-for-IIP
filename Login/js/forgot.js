@@ -25,7 +25,7 @@ $('.sub').on('click',function () {
     {
         $.ajax({
             type: "POST",
-            url: "/send_email",
+            url: "/password_recovery",
             data: {address: address.value }
         }).done(function(data){
             // alert(JSON.stringify(data));
