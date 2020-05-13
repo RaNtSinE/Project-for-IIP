@@ -18,7 +18,6 @@ label
     border-radius: 5px;
     margin-top: 100px;
     margin-bottom: 100px;
-    display: none;
 }
 
 
@@ -426,4 +425,38 @@ label
 #messageForg.wrong
 {
     opacity: 1;
+}
+
+.errorlist li {
+    cursor: default;
+    font-family: Roboto;
+    font-size: 13px;
+    position: absolute;
+    color: #EF1010;
+    width: calc(500px - 64px);
+    margin-top: 77px;
+    margin-left: 30px;
+}
+
+@media(max-width: 660px)
+{
+    .errorlist li {
+        width: calc(77vw - 64px);
+    }
+}
+
+@media(max-width: 389px)
+{
+    .errorlist li
+    {
+        margin-top:60px
+    }
+}
+
+@media(max-width: 332px)
+{
+    .errorlist li
+    {
+        font-size: 12px;
+    }
 }
