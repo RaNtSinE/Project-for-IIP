@@ -91,14 +91,13 @@
     </div>
 </header>
 <div class="content">
-    <form action="" method="post" id="forgotWindow">
-        <p id="messageForg">Ошибка</p>
-        <p class="back-password">Восстановление пароля</p>
-        <p class="label label-forgot">адрес электронной почты</p>
-        <input type="email" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
-        <p class="label label-info">На введённый адрес эллектронной почты будет отправлено письмо с новым паролем</p>
-        <input type="submit" class="enter sub" value="Отправить">
-    </form>
+        <div id="forgotPostWindow">
+            <p class="back-password">Восстановление пароля</p>
+            <p class="label-forgot-info">Если введённый адрес эллектронной почты привязан к существующему аккаунту, то на него выслан новый пароль</p>
+            <div class="but-container">
+                <a class="enter back-to-main" href="">Вернуться на главную</a>
+            </div>
+        </div>
 </div>
 </body>
 <script src="js/script.js"></script>

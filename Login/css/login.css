@@ -18,6 +18,7 @@ label
     border-radius: 5px;
     margin-top: 100px;
     margin-bottom: 100px;
+    height: 469px;
 }
 
 
@@ -66,11 +67,6 @@ label
     border-radius: 5px;
     margin-top: 100px;
     margin-bottom: 100px;
-    display: none;
-}
-#forgotPostWindow.forgOpen
-{
-    display: block;
 }
 
 
@@ -190,6 +186,7 @@ label
     text-transform: uppercase;
     margin-top: 60px;
     margin-bottom: 75px;
+    display: none;
 }
 
 .enter:hover
@@ -197,6 +194,10 @@ label
     background: #4AC9EA;
 }
 
+.enter-visible
+{
+    display: initial;
+}
 
 .label-forgot
 {
@@ -226,6 +227,7 @@ label
     padding-top: 13px;
     padding-bottom: 11px;
     letter-spacing: 0.5px;
+    display: initial;
 }
 
 .back-password
@@ -267,12 +269,14 @@ label
 .back-to-main
 {
     margin-left: 125px;
+    display: initial;
 }
 
 .go-auth
 {
     margin-left: 120px;
     cursor: pointer;
+    display: initial;
 }
 
 .but-container
@@ -346,6 +350,7 @@ label
     {
         margin-left: calc(38vw - 76px);
         margin-right: calc(38vw - 76px);
+
     }
     .back-to-main
     {
