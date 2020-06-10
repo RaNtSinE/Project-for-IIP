@@ -397,6 +397,9 @@ input, textarea
     #suc {
         margin-left: calc(13.25vw - 25px);
     }
+    #alert {
+        margin-left: calc(13.25vw - 25px);
+    }
     .plus {
         width: calc(76.1vw + 35px);
     }
@@ -425,6 +428,9 @@ input, textarea
         margin-left: calc(16.25vw - 22px);
     }
     #suc {
+        margin-left: calc(16.25vw - 22px);
+    }
+    #alert {
         margin-left: calc(16.25vw - 22px);
     }
     .plus {
@@ -456,6 +462,11 @@ input, textarea
     }
     #suc {
         margin-left: calc(17.25vw - 22px);
+    }
+    #alert {
+        margin-left: calc(17.25vw - 22px);
+        width: 77vw;
+        margin-top: -35px;
     }
     .plus {
         width: calc(62.1vw + 35px);
