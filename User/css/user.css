@@ -31,6 +31,12 @@ input, textarea
     border-radius: 5px;
     padding: 2px 18px;
     width: 865px;
+    border: none;
+}
+
+.red-border
+{
+    border: 1px solid red;
 }
 
 .form-control

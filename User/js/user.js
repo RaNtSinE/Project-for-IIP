@@ -51,6 +51,7 @@ var listener = function () {
 
         if (infoblock[0].value == "" || infoblock[1].value == "")
         {
+            infoblock[0].parentElement.classList.add("red-border");
             success = 0;
         }
     }
@@ -163,9 +164,11 @@ function addInputListeners() {
             let infoblock = blocks[j].getElementsByClassName("form-control");
             infoblock[0].addEventListener("input", function () {
                check[j] = 1;
+                infoblock[0].parentElement.classList.remove("red-border");
             });
             infoblock[1].addEventListener("input", function () {
                 check[j] = 1;
+                infoblock[1].parentElement.classList.remove("red-border");
             });
         }
     }
