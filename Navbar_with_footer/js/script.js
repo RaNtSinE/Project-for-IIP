@@ -40,17 +40,6 @@
         $('#message').removeClass('wrong');
         $('#message').removeClass('done');
       }
-
-      // if(open === 0)
-      // {
-      //   open = 1;
-      //   $('#letterWindow').fadeIn(400);
-      // }
-      // else
-      // {
-      //   open = 0;
-      //   $('#letterWindow').fadeOut(400);
-      // }
     });
 
     $('#letterClose').on('click',function ()
@@ -172,5 +161,5 @@
       let content = document.getElementById("letterContent");
       $('#letterContent').removeClass('wrong');
 
-      content.placeholder = "Ваш почтовый адрес";
+      content.placeholder = "Текст сообщения";
     });

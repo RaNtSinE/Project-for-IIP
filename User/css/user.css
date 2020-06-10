@@ -15,12 +15,12 @@ input, textarea
 
 .userInfo
 {
-    width: calc(47vw + 70px);
     margin: auto;
     margin-top: 10px;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    margin-left: calc(26.25vw - 43px);
+    width: 936px;
+    margin-left: calc(46.25vw - 410px);
 }
 
 .inputZone
@@ -30,7 +30,7 @@ input, textarea
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
     border-radius: 5px;
     padding: 2px 18px;
-    width: 47vw;
+    width: 865px;
 }
 
 .form-control
@@ -38,7 +38,6 @@ input, textarea
     border: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 47vw;
     padding-left: 0px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -50,24 +49,17 @@ input, textarea
     line-height: 18px;
     color: #313131;
     resize: none;
+    width: 866px;
 }
 
-
-
-.block_content
-{
-    /*height: calc(550px + -21vw);*/
-}
 
 .block_content {
-    width: 100%;
-    max-width: 47vw;
-    /*min-height: 54px;*/
     min-height: 120px;
     overflow: hidden;
     word-break: break-word;
     margin-top: 8px;
     white-space: pre-line;
+    width: 866px;
 }
 
 .nologgined .block_content
@@ -103,11 +95,6 @@ input, textarea
     margin-bottom: 40px;
 }
 
-.del:hover
-{
-    /*background: #4AC9EA;*/
-}
-
 .del
 {
     padding: 3px;
@@ -122,7 +109,6 @@ input, textarea
 
 .del:hover svg path
 {
-    /*background: #4AC9EA;*/
     fill: #20D1FF;
 }
 
@@ -146,7 +132,6 @@ input, textarea
     color: #00B1DF;
     border-bottom: 1px solid #00B1DF;
     width: 150px;
-    margin-left: calc(26.2vw - 41px);
     margin-top: 20px;
     top: 20px;
     cursor: pointer;
@@ -154,6 +139,7 @@ input, textarea
     opacity: 1;
     transition: 0.5s;
     z-index: 5;
+    margin-left: calc(46.25vw - 410px);
 }
 
 #suc {
@@ -206,6 +192,8 @@ input, textarea
     display: flex;
     margin-left: calc(26.25vw - 43px);
     margin-bottom: 100px;
+    width: 902px;                                   /*imp*/
+    margin-left: calc(46.25vw - 410px);
 }
 
 .plus
@@ -226,6 +214,8 @@ input, textarea
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    width: 936px;                                   /*imp*/
+
 }
 
 .add:hover div svg .circle
@@ -241,19 +231,6 @@ input, textarea
 
 .form-control::-webkit-input-placeholder {
     color: #c2c2c2;
-}
-
-@media(max-width:650px)
-{
-    .sav
-    {
-
-    }
-
-    .add
-    {
-
-    }
 }
 
 .shading
@@ -365,4 +342,94 @@ input, textarea
 {
     margin-top: 70px;
     margin-bottom: 100px;
+}
+
+@media (max-width: 1050px)
+{
+    .userInfo {
+        width: calc(76vw + 70px);
+        margin-left: calc(13.25vw - 25px);
+    }
+    .inputZone {
+        width: 76vw;
+    }
+    .form-control {
+        width: 76vw;
+    }
+    .block_content {
+        width: 100%;
+    }
+
+    #sav {
+        margin-left: calc(13.25vw - 25px);
+    }
+    #suc {
+        margin-left: calc(13.25vw - 25px);
+    }
+    .plus {
+        width: calc(76.1vw + 35px);
+    }
+    .add {
+        width: calc(76.1vw + 35px);
+    }
+}
+
+@media (max-width: 560px)
+{
+    .userInfo {
+        width: calc(70vw + 70px);
+        margin-left: calc(16.25vw - 22px);
+    }
+    .inputZone {
+        width: 70vw;
+    }
+    .form-control {
+        width: 70vw;
+    }
+    .block_content {
+        width: 100%;
+    }
+
+    #sav {
+        margin-left: calc(16.25vw - 22px);
+    }
+    #suc {
+        margin-left: calc(16.25vw - 22px);
+    }
+    .plus {
+        width: calc(70.1vw + 35px);
+    }
+    .add {
+        width: calc(70.1vw + 35px);
+    }
+}
+
+@media (max-width: 340px)
+{
+    .userInfo {
+        width: calc(62vw + 70px);
+        margin-left: calc(17.25vw - 22px);
+    }
+    .inputZone {
+        width: 62vw;
+    }
+    .form-control {
+        width: 62vw;
+    }
+    .block_content {
+        width: 100%;
+    }
+
+    #sav {
+        margin-left: calc(17.25vw - 22px);
+    }
+    #suc {
+        margin-left: calc(17.25vw - 22px);
+    }
+    .plus {
+        width: calc(62.1vw + 35px);
+    }
+    .add {
+        width: calc(62.1vw + 35px);
+    }
 }

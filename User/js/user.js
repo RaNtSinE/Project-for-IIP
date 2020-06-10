@@ -51,7 +51,7 @@ var listener = function () {
         {
             check[i] = 0;
             let infoblock = blocks[j].getElementsByClassName("form-control");
-            if (infoblock[0] !== "" && infoblock[1] !== "")
+            if (infoblock[0].value !== "" && infoblock[1].value !== "")
             {
                 if (infoblock[2].value !== "-1")
                 {
@@ -223,7 +223,6 @@ var $block = $(newdiv).clone();
 $('.add').click(function() {
     $(this).before($block.clone());
     jQuery_1_3_2("textarea[class*=expand]").TextAreaExpander();
-    // addPostListeners();
     addDeleteListeners();
     addSaveListener();
     addInputListeners();

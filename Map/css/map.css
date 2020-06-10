@@ -14,7 +14,7 @@
     font-size: 30px;
     line-height: 35px;
     white-space: pre-line;
-    margin-top: 50px;
+    margin-top: -540px;
     margin-right: calc(46vw - 500px);
     color: #3E3E3E;
     float: right;
@@ -66,7 +66,7 @@
     .content .info {
         font-size: 25px;
         line-height: 30px;
-        top: -30px;
+        top: 125px;
         margin-right: calc(56vw - 474px);
     }
     .content .text {
@@ -91,18 +91,41 @@
 @media(max-width: 1050px)
 {
     .content .image {
-        display: none;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 75px;
+    }
+    .content .image img
+    {
+        width: 500px;
     }
     .content .info {
-        width: 55vw;
+        width: 500px;
         float: none;
-        margin-left: 8vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -100px;
+        padding-bottom: 70px;
     }
     .content .text {
         white-space: normal;
     }
     .mabBlock .sales {
         padding-left: 8vw;
+    }
+}
+@media(max-width: 670px)
+{
+    .content .image {
+        width: 74vw;
+    }
+    .content .image img
+    {
+        width: 74vw;
+    }
+    .content .info {
+        width: 74vw;
     }
 }
 @media(max-width: 600px)
