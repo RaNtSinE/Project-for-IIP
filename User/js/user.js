@@ -250,10 +250,10 @@ newdiv.innerHTML = "    <div class=\"userInfo\">\n" +
     "        </a>\n" +
     "        <div class=\"inputZone\">\n" +
     "                <input type=\"text\" name=\"name\" maxlength=\"200\" class=\"form-control block_name\"\n" +
-    "                       placeholder=\"Введите имя блока...\">\n" +
+    "                       placeholder=\"Введите имя блока...\" autocomplete=\"off\">\n" +
     "\n" +
     "                <textarea name=\"content\" class=\"form-control block_content expand\"\n" +
-    "                          placeholder=\"Введите текст блока...\" ></textarea>\n" +
+    "                          placeholder=\"Введите текст блока...\" autocomplete=\"off\"></textarea>\n" +
     "                <input name=\"block_id\" class=\"form-control block_id\" type=\"hidden\" value=\"-1\">\n" +
     "        </div>\n" +
     "    </div>";
