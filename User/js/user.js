@@ -43,63 +43,101 @@ let success = 0;
 
 
 var listener = function () {
+
+    success = 1;
     for(let i = 0; i < blocks.length - 1; i++)
     {
-        j = i;
+        let infoblock = blocks[i].getElementsByClassName("form-control");
 
-        if(check[i] === 1)
+        if (infoblock[0].value == "" || infoblock[1].value == "")
         {
-            check[i] = 0;
-            let infoblock = blocks[j].getElementsByClassName("form-control");
-            if (infoblock[0].value !== "" && infoblock[1].value !== "")
-            {
-                if (infoblock[2].value !== "-1")
-                {
-                    $.ajax({
-                        type: "POST",
-                        url: "/user/edit_block",
-                        data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
-                    });
-                }
-                else
-                {
-                    var request = $.ajax({
-                        type: "POST",
-                        url: "/user/add_block",
-                        dataType: 'json',
-                        data: {name: infoblock[0].value, content: infoblock[1].value }
-                    });
-                    request.done(function(data){
-                        infoblock[2].value = data.block_id;
-                    });
-                }
-                success = 1;
-            }
+            success = 0;
         }
     }
-    if(success === 1)
+    if(success === 0)
     {
-        success = 0;
         function opsav()
         {
             $('#sav').addClass('closee');
         }
-        function opsuc()
+        function opal()
         {
-            $('#suc').addClass('openn');
+            $('#alert').addClass('openn');
         }
-        function clsuc()
+        function clal()
         {
-            $('#suc').removeClass('openn');
+            $('#alert').removeClass('openn');
         }
         function clsav()
         {
             $('#sav').removeClass('closee');
         }
         opsav();
-        setTimeout(opsuc, 500);
-        setTimeout(clsuc, 2000);
+        setTimeout(opal, 500);
+        setTimeout(clal, 2000);
         setTimeout(clsav, 2500);
+    }
+    else if(success === 1)
+    {
+        success = 0;
+        for(let i = 0; i < blocks.length - 1; i++)
+        {
+            j = i;
+
+            if(check[i] === 1)
+            {
+                check[i] = 0;
+                let infoblock = blocks[j].getElementsByClassName("form-control");
+                if (infoblock[0].value !== "" && infoblock[1].value !== "")
+                {
+                    if (infoblock[2].value !== "-1")
+                    {
+                        $.ajax({
+                            type: "POST",
+                            url: "/user/edit_block",
+                            data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
+                        });
+                    }
+                    else
+                    {
+                        var request = $.ajax({
+                            type: "POST",
+                            url: "/user/add_block",
+                            dataType: 'json',
+                            data: {name: infoblock[0].value, content: infoblock[1].value }
+                        });
+                        request.done(function(data){
+                            infoblock[2].value = data.block_id;
+                        });
+                    }
+                    success = 1;
+                }
+            }
+        }
+        if(success === 1)
+        {
+            success = 0;
+            function opsav()
+            {
+                $('#sav').addClass('closee');
+            }
+            function opsuc()
+            {
+                $('#suc').addClass('openn');
+            }
+            function clsuc()
+            {
+                $('#suc').removeClass('openn');
+            }
+            function clsav()
+            {
+                $('#sav').removeClass('closee');
+            }
+            opsav();
+            setTimeout(opsuc, 500);
+            setTimeout(clsuc, 2000);
+            setTimeout(clsav, 2500);
+        }
     }
 };
 

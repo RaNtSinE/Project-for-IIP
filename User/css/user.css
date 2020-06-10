@@ -159,10 +159,41 @@ input, textarea
     align-items: center;
     color: #00B1DF;
     width: 150px;
-    margin-left: calc(26.2vw - 41px);
+    margin-left: calc(46.25vw - 410px);
     position: relative;
     opacity: 0;
     transition: 0.5s;
+}
+
+#alert {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    position: absolute;
+
+    margin-top: -17px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #00B1DF;
+    width: 275px;
+    margin-left: calc(46.25vw - 410px);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+#alert.closee
+{
+    opacity: 0;
+    z-index: 0;
+}
+
+#alert.openn
+{
+    opacity: 1;
 }
 
 #sav.closee
