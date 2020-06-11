@@ -340,6 +340,8 @@ label
     color: #818181;
 }
 
+
+
 @media(max-width: 660px)
 {
 
@@ -466,8 +468,14 @@ label
     position: absolute;
     color: #EF1010;
     width: calc(500px - 64px);
-    margin-top: 77px;
+    margin-top: 17px;
     margin-left: 30px;
+}
+
+ul li.import-field{
+    margin-top: 72px;
+    right: 403px;
+    float: right;
 }
 
 @media(max-width: 660px)
