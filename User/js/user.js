@@ -97,6 +97,8 @@ var listener = function () {
                             type: "POST",
                             url: "/user/edit_block",
                             data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
+                        }).done(function () {
+                            success = 1;
                         });
                     }
                     else
@@ -109,9 +111,10 @@ var listener = function () {
                         });
                         request.done(function(data){
                             infoblock[2].value = data.block_id;
+                            success = 1;
                         });
                     }
-                    success = 1;
+
                 }
             }
         }
