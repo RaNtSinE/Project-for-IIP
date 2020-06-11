@@ -66,6 +66,30 @@ var listener = function () {
         setTimeout(clal, 2000);
         setTimeout(clsav, 2500);
     }
+    function opensav()
+    {
+        success = 0;
+        function opsav()
+        {
+            $('#sav').addClass('closee');
+        }
+        function opsuc()
+        {
+            $('#suc').addClass('openn');
+        }
+        function clsuc()
+        {
+            $('#suc').removeClass('openn');
+        }
+        function clsav()
+        {
+            $('#sav').removeClass('closee');
+        }
+        opsav();
+        setTimeout(opsuc, 500);
+        setTimeout(clsuc, 2000);
+        setTimeout(clsav, 2500);
+    }
     success = 1;
     for(let i = 0; i < blocks.length - 1; i++)
     {
@@ -102,7 +126,7 @@ var listener = function () {
                             url: "/user/edit_block",
                             data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
                         }).done(function () {
-                            success = 1;
+                            opensav();
                         }).fail(function () {
                             msg.innerHTML = "Сервер недоступен, попробуйте позже";
                             open();
@@ -118,7 +142,7 @@ var listener = function () {
                         });
                         request.done(function(data){
                             infoblock[2].value = data.block_id;
-                            success = 1;
+                            opensav();
                         }).fail(function () {
                             msg.innerHTML = "Сервер недоступен, попробуйте позже";
                             open();
@@ -127,30 +151,6 @@ var listener = function () {
 
                 }
             }
-        }
-        if(success === 1)
-        {
-            success = 0;
-            function opsav()
-            {
-                $('#sav').addClass('closee');
-            }
-            function opsuc()
-            {
-                $('#suc').addClass('openn');
-            }
-            function clsuc()
-            {
-                $('#suc').removeClass('openn');
-            }
-            function clsav()
-            {
-                $('#sav').removeClass('closee');
-            }
-            opsav();
-            setTimeout(opsuc, 500);
-            setTimeout(clsuc, 2000);
-            setTimeout(clsav, 2500);
         }
     }
 };
