@@ -105,7 +105,8 @@ body
     font-weight: normal;
     font-size: 20px;
     line-height: 18px;
-    overflow-x: auto;
+    word-break: break-word;
+    white-space: pre-line;
 
     color: #313131;
 }
@@ -137,8 +138,8 @@ body
     line-height: 18px;
 
     color: #313131;
-
-    overflow-x: auto;
+    word-break: break-word;
+    white-space: pre-line;
 }
 
 .jobs .more
