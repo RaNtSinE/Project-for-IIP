@@ -370,6 +370,13 @@ body
 {
     margin-left: 25px;
     margin-top: 5px;
+    width: 400px;
+}
+
+.vacName p
+{
+    word-break: break-word;
+    white-space: pre-line;
 }
 
 .vacInfo
@@ -385,7 +392,12 @@ body
     margin-top: 5px;
     width: 400px;
     height: 10vh;
-    overflow: auto;
+}
+
+.textVacInfo p
+{
+    word-break: break-word;
+    white-space: pre-line;
 }
 
 .vacTreb
@@ -401,7 +413,13 @@ body
     margin-top: 5px;
     width: 400px;
     height: 16vh;
-    overflow: auto;
+    overflow-y: auto;
+}
+
+.textVacTreb p
+{
+    word-break: break-word;
+    white-space: pre-line;
 }
 
 @media(max-width:650px)
