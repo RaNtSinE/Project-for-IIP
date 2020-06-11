@@ -196,6 +196,30 @@ label
     background: #4AC9EA;
 }
 
+.almost-enter
+{
+    background: #3AB9DA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 185px;
+    padding: 12px 35px;
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 75px;
+}
+
+.almost-enter:hover
+{
+    background: #4AC9EA;
+}
+
 .enter-visible
 {
     display: initial;
@@ -323,7 +347,10 @@ label
         width: 77vw;
         margin-left: calc(10vw - -5px);
     }
-
+    .almost-enter
+    {
+        margin-left: calc(38vw - 58px);
+    }
     .preLogin
     {
         width: 77vw;
@@ -366,6 +393,7 @@ label
     .label-preLogin-info {
         width: 64vw;
     }
+
 }
 
 @media(max-width: 650px)
