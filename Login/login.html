@@ -95,10 +95,10 @@
     <form action="login" method="post" id="login" name="login">
         <input type="hidden" name="csrfmiddlewaretoken" value="Oc8l7WMPlACEWNYjqpVKa3JGxsRlcKq86JtHrUvUraU9OuImeDS0tBrIpcmXyln2">
         <p class="authorization">Вход</p>
-        <p class="label label-1">Адрес электронной почты</p>
+        <p class="label label-1">адрес электронной почты</p>
         <p><label for="id_username">Имя пользователя:</label>
             <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username"></p>
-        <p class="label label-2">Пароль</p>
+        <p class="label label-2">пароль</p>
         <p><label for="id_password">Пароль:</label>
             <input type="password" name="password" autocomplete="current-password" required="" id="id_password"></p>
         <div class="forgotten">
@@ -110,7 +110,7 @@
 
         <input type="hidden" name="next" value="/login">
     </form>
-    <input type="submit" value="Войти" class="enter" onclick="document.forms['login'].submit();">
+    <input type="submit" value="Войти" id="submit" class="enter" onclick="document.forms['login'].submit();">
 
 </div>
 </body>
