@@ -40,22 +40,10 @@ let blocks = $('.userInfo');
 let check = [];
 let inputCheck = [];
 let success = 0;
-
+let msg = $('#alert');
 
 var listener = function () {
-
-    success = 1;
-    for(let i = 0; i < blocks.length - 1; i++)
-    {
-        let infoblock = blocks[i].getElementsByClassName("form-control");
-
-        if (infoblock[0].value == "" || infoblock[1].value == "")
-        {
-            infoblock[0].parentElement.classList.add("red-border");
-            success = 0;
-        }
-    }
-    if(success === 0)
+    function open()
     {
         function opsav()
         {
@@ -78,6 +66,22 @@ var listener = function () {
         setTimeout(clal, 2000);
         setTimeout(clsav, 2500);
     }
+    success = 1;
+    for(let i = 0; i < blocks.length - 1; i++)
+    {
+        let infoblock = blocks[i].getElementsByClassName("form-control");
+
+        if (infoblock[0].value == "" || infoblock[1].value == "")
+        {
+            infoblock[0].parentElement.classList.add("red-border");
+            success = 0;
+        }
+    }
+    if(success === 0)
+    {
+        msg.value = "Заполните или удалите пустые блоки";
+        open();
+    }
     else if(success === 1)
     {
         success = 0;
@@ -99,6 +103,9 @@ var listener = function () {
                             data: {block_id: infoblock[2].value, name: infoblock[0].value, content: infoblock[1].value }
                         }).done(function () {
                             success = 1;
+                        }).fail(function () {
+                            msg.value = "Сервер недоступен, попробуйте позже";
+                            open();
                         });
                     }
                     else
@@ -112,7 +119,10 @@ var listener = function () {
                         request.done(function(data){
                             infoblock[2].value = data.block_id;
                             success = 1;
-                        });
+                        }).fail(function () {
+                            msg.value = "Сервер недоступен, попробуйте позже";
+                            open();
+                        });пше
                     }
 
                 }
