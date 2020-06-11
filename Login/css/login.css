@@ -474,14 +474,28 @@ label
 
 ul li.import-field{
     margin-top: 72px;
-    right: 403px;
-    float: right;
+    margin-left: 344px;
+    width: 124px;
 }
 
 @media(max-width: 660px)
 {
     .errorlist li {
         width: calc(77vw - 64px);
+        margin-top: 7px;
+    }
+    ul li.import-field {
+        margin-top: 72px;
+        margin-left: calc(73.5vw - 137px);
+        width: 124px;
+    }
+}
+
+@media(max-width: 500px)
+{
+    ul li.import-field {
+        margin-top: 57px;
+        margin-left: 30px;
     }
 }
 
@@ -489,7 +503,7 @@ ul li.import-field{
 {
     .errorlist li
     {
-        margin-top:60px
+        margin-top:-2px
     }
 }
 
