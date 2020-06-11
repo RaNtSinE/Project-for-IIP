@@ -122,7 +122,7 @@ var listener = function () {
                         }).fail(function () {
                             msg.value = "Сервер недоступен, попробуйте позже";
                             open();
-                        });пше
+                        });
                     }
 
                 }
