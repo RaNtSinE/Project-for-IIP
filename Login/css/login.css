@@ -157,6 +157,7 @@ label
     position: absolute;
     left: calc(50vw - 152px);
     margin-top: 42px;
+    z-index: 20;
 }
 
 .hide
@@ -181,12 +182,13 @@ label
     line-height: 16px;
     text-align: center;
     color: #FFFFFF;
-    margin-left: 185px;
+    left: calc(49.4vw - 57px);
     padding: 12px 35px;
     text-transform: uppercase;
-    margin-top: 60px;
-    margin-bottom: 75px;
     display: none;
+    position: absolute;
+    margin-top: -217px;
+    z-index: 0;
 }
 
 .enter:hover
@@ -342,9 +344,6 @@ label
 
     #id_username, #id_password {
         width: calc(77vw - 64px);
-    }
-    .enter {
-        margin-left: calc(38vw - 58px);
     }
     .sub
     {
