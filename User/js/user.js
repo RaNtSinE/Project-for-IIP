@@ -40,9 +40,9 @@ let blocks = $('.userInfo');
 let check = [];
 let inputCheck = [];
 let success = 0;
-let msg = $('#alert');
 
 var listener = function () {
+    let msg = document.getElementById("alert");
     function open()
     {
         function opsav()
@@ -79,7 +79,7 @@ var listener = function () {
     }
     if(success === 0)
     {
-        msg.value = "Заполните или удалите пустые блоки";
+        msg.innerHTML = "Заполните или удалите пустые блоки";
         open();
     }
     else if(success === 1)
@@ -104,7 +104,7 @@ var listener = function () {
                         }).done(function () {
                             success = 1;
                         }).fail(function () {
-                            msg.value = "Сервер недоступен, попробуйте позже";
+                            msg.innerHTML = "Сервер недоступен, попробуйте позже";
                             open();
                         });
                     }
@@ -120,7 +120,7 @@ var listener = function () {
                             infoblock[2].value = data.block_id;
                             success = 1;
                         }).fail(function () {
-                            msg.value = "Сервер недоступен, попробуйте позже";
+                            msg.innerHTML = "Сервер недоступен, попробуйте позже";
                             open();
                         });
                     }
@@ -262,10 +262,10 @@ newdiv.innerHTML = "    <div class=\"userInfo\">\n" +
     "            </svg>\n" +
     "        </a>\n" +
     "        <div class=\"inputZone\">\n" +
-    "                <input type=\"text\" name=\"name\" maxlength=\"200\" class=\"form-control block_name\"\n" +
+    "                <input type=\"text\" name=\"name\" maxlength=\"65\" class=\"form-control block_name\"\n" +
     "                       placeholder=\"Введите имя блока...\" autocomplete=\"off\">\n" +
     "\n" +
-    "                <textarea name=\"content\" class=\"form-control block_content expand\"\n" +
+    "                <textarea name=\"content\" class=\"form-control block_content expand\" maxlength=\"650\"\n" +
     "                          placeholder=\"Введите текст блока...\" autocomplete=\"off\"></textarea>\n" +
     "                <input name=\"block_id\" class=\"form-control block_id\" type=\"hidden\" value=\"-1\">\n" +
     "        </div>\n" +
